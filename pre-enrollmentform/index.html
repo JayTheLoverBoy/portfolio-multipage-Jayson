@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pre-Enrollment Form - MPC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #555;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-row > div {
+      flex: 1;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mallig Plains Colleges, Inc.</h1>
+  <h2>Casili, Mallig, Isabela</h2>
+  <h2>Pre-Enrollment Form - College & Graduate School</h2>
+
+  <form id="enrollmentForm">
+    <div class="form-row">
+      <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" required>
+      </div>
+      <div>
+        <label>Given Name</label>
+        <input type="text" name="givenName" required>
+      </div>
+      <div>
+        <label>Middle Name</label>
+        <input type="text" name="middleName">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Sex</label>
+        <select name="sex">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+      <div>
+        <label>Birthdate</label>
+        <input type="date" name="birthdate">
+      </div>
+      <div>
+        <label>Birthplace</label>
+        <input type="text" name="birthplace">
+      </div>
+    </div>
+
+    <label>Permanent Address</label>
+    <input type="text" name="address">
+
+    <div class="form-row">
+      <div>
+        <label>Father's Name</label>
+        <input type="text" name="fatherName">
+      </div>
+      <div>
+        <label>Occupation</label>
+        <input type="text" name="fatherOccupation">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Mother's Name</label>
+        <input type="text" name="motherName">
+      </div>
+      <div>
+        <label>Occupation</label>
+        <input type="text" name="motherOccupation">
+      </div>
+    </div>
+
+    <label>If married, name of spouse</label>
+    <input type="text" name="spouse">
+
+    <label>If transient in Mallig, Guardian/Landlord Name</label>
+    <input type="text" name="guardian">
+
+    <div class="form-row">
+      <div>
+        <label>Course & Year</label>
+        <input type="text" name="course">
+      </div>
+      <div>
+        <label>Major</label>
+        <input type="text" name="major">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Nationality</label>
+        <input type="text" name="nationality">
+      </div>
+      <div>
+        <label>Civil Status</label>
+        <select name="civilStatus">
+          <option>Single</option>
+          <option>Married</option>
+          <option>Widowed</option>
+          <option>Separated</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Tel. No. / CP No.</label>
+        <input type="text" name="contact">
+      </div>
+      <div>
+        <label>Email Address</label>
+        <input type="email" name="email">
+      </div>
+    </div>
+
+    <label>Educational Attainment (School & Year)</label>
+    <div class="form-row">
+      <div>
+        <label>Elementary</label>
+        <input type="text" name="elementarySchool">
+      </div>
+      <div>
+        <label>Year</label>
+        <input type="text" name="elementaryYear">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Secondary</label>
+        <input type="text" name="secondarySchool">
+      </div>
+      <div>
+        <label>Year</label>
+        <input type="text" name="secondaryYear">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>College</label>
+        <input type="text" name="collegeSchool">
+      </div>
+      <div>
+        <label>Year</label>
+        <input type="text" name="collegeYear">
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Form submitted successfully!");
+    });
+  </script>
+
+</body>
+</html>

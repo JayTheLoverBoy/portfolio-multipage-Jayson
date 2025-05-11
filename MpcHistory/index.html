@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mallig Plains Colleges</title>
+    <link rel="stylesheet" href="../MpcHistory/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>MALLIG PLAINS COLLEGES</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="mpchistory">
+        <img src="image/IMG-MPC.jpg" alt="MPC History" />
+        <h2>HISTORY</h2>
+        <p>
+          <strong>1951 - Foundation</strong><br />
+          Mallig Plains Colleges (MPC) was founded on February 14, 1951. The
+          founder headed by the incumbent president and BOD chairperson of the
+          college with other civic-spirited citizens, namely: Mr. Juan A.
+          Galapon, Mrs. Felix C. Elefante, Mr. Pedro Y. Lactao, and Rev. Jose
+          Pas Franada, responded graciously to the vision of late Mrs. Victoria
+          Donato Ignacio, spouse of President Ignacio, to realize her obsession
+          to help provide quality education to ambitious children of poor
+          immigrants desirous to go beyond elementary school level.
+        </p>
+        <p>
+          <strong>1952 - Expansion</strong><br />
+          The school initially opened as a secondary school known as Western
+          Isabela Academy (WIA), a non-sectarian proprietary institution, and
+          housed in a rented 2-room building along the national highway in
+          Casili, Mallig, Isabela. In 1952, the school acquired a new site where
+          it is presently located, putting up a school building with more
+          classrooms to accommodate the growing school population from
+          neighboring towns including some towns of Ifugao and the Mt. Province.
+        </p>
+        <p>
+          <strong>1950s-1990s - Recognition</strong><br />
+          The school became popular as a highly performing school in curricular
+          and co-curricular activities such as NCEE/NSAT and CAT, gaining
+          continuing appreciation and recognition from educational leaders both
+          from the public sector, led then by Director Eladio C. Dioko. They
+          also observed that the school was comparatively better than many of
+          the public vocational agricultural schools in the province, evidenced
+          by its functional vegetable gardens and crop farms, along with its
+          cattle-raising projects.
+        </p>
+        <p>
+          <strong>1992-1994 - College Courses</strong><br />
+          In 1992–1994, it opened a complete elementary school; and on March 15,
+          1994, it acquired a new name, Western Isabela Polytechnic College
+          (WIPC), when it offered four (4) degree courses, namely Bachelor in
+          Elementary Education (BEEd), Bachelor in Secondary Education (BSEd)
+          with Dean Danilo T. Granado as head of the College of Education,
+          followed by the appointment of Mr. Rodolfo de Luna as head of BS
+          Accountancy, BS Commerce, and the 2-year Computer Secretarial course.
+          Mrs. Angela Granado was appointed school registrar while Mrs.
+          Juliberta de Luna was named college librarian.
+        </p>
+        <p>
+          <strong>2004 - Renaming</strong><br />
+          On January 19, 2004, President Leocadio E. Ignacio, together with the
+          BOD members, decided to rename MALLIG PLAINS COLLEGES as a fitting
+          tribute to the school's growing service area and clientele,
+          particularly the Mallig Plains, which is considered the rice basket of
+          Isabela.
+        </p>
+      </section>
+
+      <!-- Slideshow Viewer at Bottom -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="image/mpcpic5.webp" alt="MPC Image 1" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image/mpcpic6.jpg" alt="MPC Image 2" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image/mpcpic3.webp" alt="MPC Image 3" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image/mpcpic4.webp" alt="MPC Image 4" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image/mpcpic1.webp" alt="MPC Image 5" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+
+      <div class="slideshow-controls">
+        <button onclick="pauseSlideshow()">Pause</button>
+        <button onclick="startSlideshow()">Play</button>
+      </div>
+    </main>
+
+    <script>
+      let slideIndex = 1;
+      let slideshowInterval;
+
+      // Initialize slideshow
+      showSlides(slideIndex);
+      startSlideshow();
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+        resetSlideshow();
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+        resetSlideshow();
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function startSlideshow() {
+        clearInterval(slideshowInterval);
+        slideshowInterval = setInterval(() => {
+          plusSlides(1);
+        }, 3000);
+      }
+
+      function pauseSlideshow() {
+        clearInterval(slideshowInterval);
+      }
+
+      function resetSlideshow() {
+        pauseSlideshow();
+        startSlideshow();
+      }
+    </script>
+  </body>
+</html>

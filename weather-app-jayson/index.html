@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-header">
+        <h1><i class="fas fa-cloud-sun"></i> Global Weather App</h1>
+        <p class="tagline">Your magical weather companion</p>
+      </div>
+
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="city-input" placeholder="Enter city name..." />
+          <button id="search-btn" class="btn-primary"><i class="fas fa-search"></i> Search</button>
+          <button id="location-btn" class="btn-secondary">
+            <i class="fas fa-location-arrow"></i> My Location
+          </button>
+        </div>
+      </div>
+
+      <div class="weather-display">
+        <div class="current-weather">
+          <div class="location">
+            <h2 id="city-name">--</h2>
+            <p id="current-date">--</p>
+          </div>
+          <div class="weather-info">
+            <div class="temperature">
+              <img
+                id="weather-icon"
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="Weather Icon"
+              />
+              <span id="current-temp">--°C</span>
+            </div>
+            <div class="details">
+              <p id="weather-description">--</p>
+              <div class="detail-item">
+                <i class="fas fa-tint"></i> Humidity: <span id="humidity">--%</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-wind"></i> Wind: <span id="wind-speed">-- km/h</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-temperature-low"></i> Feels Like: <span id="feels-like">--°C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+          <div class="forecast-cards" id="forecast-container">
+            <!-- Forecast cards will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <div class="app-footer">
+        <p>Data refreshes every search with random variations</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

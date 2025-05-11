@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 3 Filipino Movies</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background-color: #f8f1f1;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header Styles */
+      header {
+        text-align: center;
+        padding: 40px 0;
+        background: linear-gradient(135deg, #d72323, #3e64ff);
+        color: white;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://i.imgur.com/JWwSNBm.png') no-repeat;
+        background-size: cover;
+        opacity: 0.1;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        position: relative;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        position: relative;
+        font-weight: 300;
+      }
+
+      /* Movie Cards */
+      .movies-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .movie-card {
+        flex: 1 1 350px;
+        max-width: 380px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+      }
+
+      .movie-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .movie-poster {
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .movie-poster::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 50%);
+      }
+
+      .movie-info {
+        padding: 30px;
+        position: relative;
+      }
+
+      .movie-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #222;
+        font-weight: 700;
+      }
+
+      .movie-year {
+        display: block;
+        font-size: 1rem;
+        color: #d72323;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .movie-description {
+        color: #555;
+        margin-bottom: 25px;
+        font-size: 1.05rem;
+      }
+
+      .movie-rating {
+        display: inline-flex;
+        align-items: center;
+        background: #ffd700;
+        color: #333;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .movie-rating::before {
+        content: '★';
+        margin-right: 8px;
+        color: #ff6b6b;
+        font-size: 1.4rem;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 60px;
+        padding: 30px;
+        color: #666;
+        border-top: 1px solid #eee;
+      }
+
+      .flag {
+        display: inline-block;
+        width: 25px;
+        height: 15px;
+        background: linear-gradient(to bottom, #0038a8 33%, white 33% 66%, #ce1126 66%);
+        margin-right: 10px;
+        vertical-align: middle;
+        border-radius: 2px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .movies-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .movie-card {
+          flex: 1 1 auto;
+          max-width: 100%;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Top 3 Filipino Movies</h1>
+        <p class="subtitle">Celebrating the best of Philippine cinema</p>
+      </header>
+
+      <div class="movies-container">
+        <!-- Movie 1 -->
+        <div class="movie-card">
+          <div class="movie-poster" style="background-image: url(images/Heneral\ Luna.jfif)"></div>
+          <div class="movie-info">
+            <h2 class="movie-title">Heneral Luna</h2>
+            <span class="movie-year">2015</span>
+            <p class="movie-description">
+              Proudly showcasing Philippine cinema | Created with love for Filipino films A
+              historical biopic about General Antonio Luna, one of the fiercest generals of the
+              Philippine Revolution. The film depicts his leadership of the Philippine Revolutionary
+              Army during the Philippine-American War, showcasing his fiery temper and
+              uncompromising patriotism.
+            </p>
+            <span class="movie-rating">100/100</span>
+          </div>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="movie-card">
+          <div
+            class="movie-poster"
+            style="background-image: url(images/Four\ Sisters\ and\ a\ Wedding.jfif)"
+          ></div>
+          <div class="movie-info">
+            <h2 class="movie-title">Four Sisters and a Wedding</h2>
+            <span class="movie-year">2013</span>
+            <p class="movie-description">
+              A heartwarming family comedy-drama about four sisters who reunite when their younger
+              brother announces his plans to get married. The film explores family dynamics, sibling
+              rivalries, and unconditional love in a distinctly Filipino context.
+            </p>
+            <span class="movie-rating">8.7/10</span>
+          </div>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="movie-card">
+          <div class="movie-poster" style="background-image: url(images/Kita\ Kita.jfif)"></div>
+          <div class="movie-info">
+            <h2 class="movie-title">Kita Kita</h2>
+            <span class="movie-year">2017</span>
+            <p class="movie-description">
+              A romantic comedy about a Filipino tour guide in Japan who temporarily loses her
+              eyesight and develops a relationship with her neighbor who helps her navigate her new
+              condition. The film became a surprise box office hit, praised for its simple yet
+              touching story.
+            </p>
+            <span class="movie-rating">9.0/10</span>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          <span class="flag"></span> Proudly showcasing Philippine cinema | Created with love for
+          Filipino films
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

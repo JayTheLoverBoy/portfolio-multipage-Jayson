@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* History Section - Roadmap Style */
+#mpchistory {
+  background-color: white;
+  padding: 40px;
+  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#mpchistory::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 4px;
+  height: calc(100% - 150px);
+  background: #003366;
+  z-index: 1;
+}
+
+#mpchistory h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+}
+
+#mpchistory img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+#mpchistory p {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 80px;
+  padding-right: 20px;
+  background: white;
+  z-index: 2;
+}
+
+#mpchistory p::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #003366;
+  border: 4px solid #ffcc00;
+  z-index: 3;
+}
+
+/* Slideshow Section */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  vertical-align: middle;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Controls */
+.slideshow-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slideshow-controls button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slideshow-controls button:hover {
+  background-color: #002244;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

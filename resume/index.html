@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Resume with Picture</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaeaea;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .left {
+      width: 35%;
+      background-color: #007bff;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .right {
+      width: 65%;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 25px;
+      color: #007bff;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .contact, .skills {
+      margin-top: 20px;
+    }
+
+    .skills .skill {
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 12px;
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .section span {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Jayson Flores</h1>
+    <p>Web Developer</p>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: jaysonf1920@gmail.com</p>
+      <p>Phone: 0912-345-6789</p>
+      <p>Address: Centro 1, Mallig, Isabela</p>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="section">
+      <h2>Profile</h2>
+      <p>Motivated and detail-oriented web developer with experience in building modern and responsive websites. Passionate about clean code, user experience, and solving real-world problems through technology.</p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <h3>Mallig Plains Colleges, Inc.</h3>
+      <span>BS in Information Technology, 2021 - 2025</span>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <h3>IT Intern, LGU Mallig</h3>
+      <span>Jan 2025 – Mar 2025</span>
+      <p>Assisted in developing local government web portals, performed system maintenance, and supported end-users with troubleshooting tasks.</p>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <h3>Responsive Web Design</h3>
+      <span>FreeCodeCamp, 2024</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

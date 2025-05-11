@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Top 5 Websites for Students</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --gradient-1: #ff9a9e;
+        --gradient-2: #fad0c4;
+        --gradient-3: #a18cd1;
+        --text-dark: #2d3436;
+        --text-light: #636e72;
+        --white: #ffffff;
+        --card-bg: rgba(255, 255, 255, 0.9);
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--gradient-1),
+          var(--gradient-2),
+          var(--gradient-3)
+        );
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--white);
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .websites-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .website-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .website-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-header {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+      }
+
+      .card-content p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+      }
+
+      .visit-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.7rem 1.5rem;
+        background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+      }
+
+      .visit-btn i {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .visit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
+      }
+
+      .visit-btn:hover i {
+        transform: translateX(3px);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--white);
+        font-size: 1rem;
+        opacity: 0.8;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Top 5 Websites</h1>
+        <p class="subtitle">Essential tools for students and teenagers</p>
+      </header>
+
+      <div class="websites-grid">
+        <!-- Website 1 -->
+        <div class="website-card">
+          <div class="card-header">
+            <div class="card-icon" style="background: #ff6b6b">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="card-title">YouTube</div>
+          </div>
+          <div class="card-content">
+            <p>
+              Learn anything from tutorials, enjoy entertainment, or discover new music. The
+              ultimate video platform for students.
+            </p>
+            <a href="https://youtube.com" target="_blank" class="visit-btn">
+              Visit Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Website 2 -->
+        <div class="website-card">
+          <div class="card-header">
+            <div class="card-icon" style="background: #4ecdc4">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="card-title">Khan Academy</div>
+          </div>
+          <div class="card-content">
+            <p>
+              Free world-class education for anyone, anywhere. Perfect for learning math, science,
+              history and more.
+            </p>
+            <a href="https://khanacademy.org" target="_blank" class="visit-btn">
+              Visit Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Website 3 -->
+        <div class="website-card">
+          <div class="card-header">
+            <div class="card-icon" style="background: #45b7d1">
+              <i class="fas fa-music"></i>
+            </div>
+            <div class="card-title">Spotify</div>
+          </div>
+          <div class="card-content">
+            <p>
+              Stream millions of songs, create playlists, and discover new music. Essential for
+              study sessions and relaxation.
+            </p>
+            <a href="https://spotify.com" target="_blank" class="visit-btn">
+              Visit Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Website 4 -->
+        <div class="website-card">
+          <div class="card-header">
+            <div class="card-icon" style="background: #a37eba">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="card-title">Quizlet</div>
+          </div>
+          <div class="card-content">
+            <p>
+              Create flashcards, practice tests, and study games to ace your exams. A student's best
+              study companion.
+            </p>
+            <a href="https://quizlet.com" target="_blank" class="visit-btn">
+              Visit Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Website 5 -->
+        <div class="website-card">
+          <div class="card-header">
+            <div class="card-icon" style="background: #ffa07a">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="card-title">Cool Math Games</div>
+          </div>
+          <div class="card-content">
+            <p>
+              Fun, free math games and logic puzzles to train your brain. Learning math has never
+              been this enjoyable!
+            </p>
+            <a href="https://coolmathgames.com" target="_blank" class="visit-btn">
+              Visit Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Made by Jayson Flores.</footer>
+  </body>
+</html>
